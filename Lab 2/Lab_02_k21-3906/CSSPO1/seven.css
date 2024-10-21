@@ -1,0 +1,45 @@
+.h {
+    background-color: black;
+    text-align: center;
+    padding: 5px 5px;
+    color: white;
+    font-size: medium;
+
+}
+
+.p1 {
+    background-color: bisque;
+    text-align: left;
+    padding: 10px 10px;
+
+}
+
+.p2 {
+    background-color: bisque;
+    text-align: left;
+    padding: 10px 10px;
+}
+
+.p3 {
+    background-color: bisque;
+    text-align: center;
+    padding: 10px 10px;
+
+
+}
+
+.b1 {
+    width: 230px;
+}
+
+.p3 button {
+    display: inline-block;
+    margin: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+
+}

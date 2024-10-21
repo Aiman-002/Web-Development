@@ -1,0 +1,34 @@
+.html{
+    border-style: solid;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.head{
+    border-style: solid;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.title{
+    border-style: solid;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.title p{
+    text-align: center;
+    font-weight: bolder;
+}
+.inside{
+    border-style: solid;
+    padding: 300px 300px;
+}
+.inside h1{
+    text-align: center;
+}
+.inside p{
+    text-align: center;
+}
+.body{
+    border-style: solid;
+    padding-left: 100px;
+    padding-right: 100px;
+}

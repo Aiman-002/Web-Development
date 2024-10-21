@@ -1,0 +1,66 @@
+body {
+    background-color: black;
+}
+
+.head {
+    color: white;
+    text-align: center;
+}
+
+.nav {
+    background-color: bisque;
+    padding: 1px 1px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+
+}
+
+.list a {
+    text-decoration: none;
+}
+
+.list button {
+    background-color: black;
+    color: white;
+}
+
+.d1 {
+    display: flex;
+    gap: 1em;
+}
+
+.main {
+    background-color: aliceblue;
+    padding: 10px 10px;
+    flex: 5;
+}
+
+.aside {
+    background-color: bisque;
+    padding: 10px 10px;
+    flex: 1;
+
+}
+
+.article {
+    text-align: center;
+}
+
+.rel {
+    text-align: center;
+}
+
+a {
+    color: black;
+    font-weight: bold;
+
+}
+
+.f {
+    background-color: aliceblue;
+    padding: 10px 10px;
+}

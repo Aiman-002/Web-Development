@@ -1,0 +1,93 @@
+.d1 {
+  background-color: black;
+  color: aliceblue;
+  padding: 5px 5px;
+  border-radius: 10px;
+}
+
+.d2 {
+  background-color: black;
+  color: aliceblue;
+  padding: 5px 5px;
+  border-radius: 10px;
+}
+
+.d3 {
+  display: flex;
+  gap: 1em;
+}
+
+.main1 {
+  flex: 6;
+  background-color: black;
+  color: aliceblue;
+  padding: 5px 5px;
+  border-radius: 10px;
+}
+
+.main1 h1 {
+  text-align: center;
+}
+
+.aside {
+  flex: 2;
+  background-color: black;
+  color: aliceblue;
+  padding: 5px 5px;
+  border-radius: 10px;
+}
+
+.aside h1 {
+  text-align: center;
+}
+
+.inside_div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-bottom: 50px;
+}
+
+.a1 {
+  flex: 2;
+  background-color: aliceblue;
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+  
+}
+
+.a2 {
+  flex: 2;
+  background-color: aliceblue;
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.a3 {
+  flex: 2;
+  background-color: aliceblue;
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.a4 {
+  flex: 1;
+  background-color: aliceblue;
+  color: black;
+  padding: 1px 1px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.f {
+  background-color: black;
+  color: aliceblue;
+  padding: 5px 5px;
+  border-radius: 10px;
+  text-align: center;
+}
