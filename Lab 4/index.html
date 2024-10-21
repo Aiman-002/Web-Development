@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="panel-heading">
+
+        <Button ID="generatepfd" Class="btn btn-primary pull-right " Style="margin-right:1.5%" Text="Generate PDF"
+            OnClick="generatepfd_Click">Generate PDF</Button>
+
+        <h1 class="text-primary" id="dailymeet" Style="text-align:center"> IBL Logistics Order Form </h1>
+
+    </div>
+
+    <div class="panel-body">
+
+        <div class="col-xs-3">
+
+            <label for="name" class="control-label center-block label label-primary" id=""
+                style="border:2px solid green;"> Customer Code </label>
+            <div class="form-group">
+
+                <Label ID="customercode" Text="" class="form-control"></Label>
+            </div>
+        </div>
+
+        <div class="col-xs-3">
+
+            <label for="name" class="control-label center-block label label-primary" id=""
+                style="border:2px solid green;"> Customer Name </label>
+            <div class="form-group">
+
+                <Label ID="customername" Text="" class="form-control"></Label>
+            </div>
+        </div>
+        <div class="col-xs-3">
+
+            <label for="name" class="control-label center-block label label-primary" id=""
+                style="border:2px solid green;"> City </label>
+            <div class="form-group">
+
+                <Label ID="city" Text="" class="form-control"></Label>
+            </div>
+        </div>
+
+        <div class="col-xs-3">
+
+            <label for="name" class="control-label center-block label label-primary" id=""
+                style="border:2px solid green;"> Order ID </label>
+            <div class="form-group">
+
+                <Label ID="orderid" Text="" class="form-control"></Label>
+            </div>
+        </div>
+
+        <div class="col-xs-3">
+
+            <label for="name" class="control-label center-block label label-primary" id=""
+                style="border:2px solid green;">Order Date </label>
+            <div class="form-group">
+
+                <Label ID="orderdate" Text="" class="form-control"></Label>
+            </div>
+        </div>
+
+        <div class="col-xs-3">
+
+            <label for="name" class="control-label center-block label label-primary" id=""
+                style="border:2px solid green;">Customer Contact Person </label>
+            <div class="form-group">
+
+                <Label ID="contactperson" Text="" class="form-control"></Label>
+            </div>
+        </div>
+        <div class="col-xs-3">
+
+            <label for="name" class="control-label center-block label label-primary" id=""
+                style="border:2px solid green;">Customer Contact Info </label>
+            <div class="form-group">
+
+                <Label ID="contactno" Text="" class="form-control"></Label>
+            </div>
+        </div>
+        <div class="col-xs-3">
+
+            <label for="name" class="control-label center-block label label-primary" id=""
+                style="border:2px solid green;">Stock Reciver Name /Contact </label>
+            <div class="form-group">
+
+                <label ID="recivername" class="form-control"></label>
+            </div>
+        </div>
+        <div class="col-xs-3">
+
+            <label for="name" class="control-label center-block label label-primary" id=""
+                style="border:2px solid green;"> Searle Customer Code</label>
+            <div class="form-group">
+
+                <label ID="recivercontact" class="form-control"></label>
+            </div>
+        </div>
+
+
+        <div class="col-xs-3">
+            <label for="pwd" class="control-label center-block label label-primary" style="border:2px solid green;">
+                Delivery Mode </label>
+            <label ID="deliverymode" class="form-control">
+
+            </label>
+        </div>
+        <div class="col-xs-3">
+            <label for="pwd" class="control-label center-block label label-primary"
+                style="border:2px solid green;">Payment Mode </label>
+            <label ID="payment" class="form-control">
+
+            </label>
+        </div>
+        <div class="col-xs-3">
+            <label for="pwd" class="control-label center-block label label-primary"
+                style="border:2px solid green;">Category</label>
+            <label ID="Category" class="form-control">
+
+            </label>
+        </div>
+        <div class="col-xs-3" style="    margin-left: -24.9%;    margin-top: 1%;">
+
+            <label for="name" class="control-label center-block label label-primary" id=""
+                style="border:2px solid green;"> Project Name</label>
+            <div class="form-group">
+
+                <label ID="pname" class="form-control"></label>
+            </div>
+        </div>
+
+        <div class="col-xs-3" style="    margin-left: -24.9%;    margin-top: 1%;">
+
+            <label for="name" class="control-label center-block label label-primary" id=""
+                style="border:2px solid green;"> Bill Through</label>
+            <div class="form-group">
+
+                <label ID="searlcode" class="form-control"></label>
+            </div>
+        </div>
+
+        <div class="col-xs-3" style="    margin-top: 15px;">
+
+            <label for="name" class="control-label center-block label label-primary" id=""
+                style="border:2px solid green;"> Salesman</label>
+            <div class="form-group">
+
+                <Label ID="username" class="form-control">
+                </Label>
+            </div>
+        </div>
+
+        <div class="col-xs-3" style="    margin-top: 15px;">
+
+            <label for="name" class="control-label center-block label label-primary" id=""
+                style="border:2px solid green;"> Sample Order ID</label>
+            <div class="form-group">
+
+                <Label ID="Sample_id" class="form-control">
+                </Label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+    <div class="panel-body">
+        <div class="col-sm-12">
+            <div class="input-group">
+                <span class="input-group-addon btn-primary" Style="color:#fff;">Delivery Address</span>
+
+                <Label ID="address" Text="" class="form-control" aria-describedby="inputGroupSuccess2Status"></Label>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-body">
+
+        <div class="panel-body">
+
+            <table class="table table-bordered" style="float:left;width:100%;font-size:90%;">
+                <thead style="background:#337ab7 ;Font-Bold:true; ForeColor:White">
+                    <tr>
+                        <th>No.</th>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>PID001</td>
+                        <td>Product 1</td>
+                        <td>$10.00</td>
+                        <td>5</td>
+                        <td>$50.00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>PID002</td>
+                        <td>Product 2</td>
+                        <td>$15.00</td>
+                        <td>3</td>
+                        <td>$45.00</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>PID003</td>
+                        <td>Product 3</td>
+                        <td>$20.00</td>
+                        <td>4</td>
+                        <td>$80.00</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>PID004</td>
+                        <td>Product 4</td>
+                        <td>$25.00</td>
+                        <td>2</td>
+                        <td>$50.00</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>PID005</td>
+                        <td>Product 5</td>
+                        <td>$30.00</td>
+                        <td>6</td>
+                        <td>$180.00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered striped" border="1" style="width: 59.8%; ">
+
+                <tr>
+
+                    <td id="test1"> Invoice Amount </td>
+                    <td> <label ID="sum" class="form-control">405</label> </td>
+
+                </tr>
+                <tr>
+
+                    <td> GST % </td>
+                    <td> <label ID="gst" class="form-control">22%</label></td>
+
+                </tr>
+                <tr>
+
+                    <td> Incl. Sales Tax</td>
+                    <td> <label ID="total" class="form-control">492</label> </td>
+
+                </tr>
+
+
+                <tr>
+                    <td> GSH</td>
+                    <td> <label ID="gsh" class="form-control">0</label></td>
+
+
+                </tr>
+                <tr>
+                    <td> Delivery Charges</td>
+                    <td> <label ID="dcharges" class="form-control">109</label></td>
+                </tr>
+                <tr>
+
+                <tr>
+                    <td> Discount/Gain</td>
+                    <td> <label ID="per_margin" class="form-control">0.0</label></td>
+                </tr>
+
+
+            </table>
+        </div>
+
+        <div class="panel-body">
+
+            <table class="table table-bordered" style="width: 35%;">
+
+                <tr>
+                    <td class="bg-primary" style="width: 25%;"> Invoice Date </td>
+                    <td> <label ID="ddate" class="form-control"></label> </td>
+                </tr>
+
+                <tr>
+                    <td class="bg-primary" style="width: 50%;"> IBL Invoice #</td>
+                    <td> <label ID="spl" class="form-control"></label> </td>
+                </tr>
+
+                <tr>
+                    <td class="bg-primary" style="width: 50%;"> Delivery Note </td>
+                    <td> <label ID="DN" class="form-control"></label> </td>
+                </tr>
+
+                <tr>
+                    <td class="bg-primary" style="width: 25%;"> Tracking No </td>
+                    <td> <label ID="trackingno" class="form-control"></label> </td>
+                </tr>
+
+                <tr>
+                    <td class="bg-primary" style="width: 25%;"> Delivered By </td>
+                    <td> <label ID="boy" class="form-control"></label> </td>
+                </tr>
+
+            </table>
+
+        </div>
+        <div class="panel-body">
+            <Button ID="Submit" Visible="false" Text="Submit" value="Submit" class=" btn btn-primary pull-right"
+                OnClick="Button1_Click">Submit</Button>
+        </div>
+        </Content>
+</body>
+</html>

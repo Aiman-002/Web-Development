@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 01 Part 01 - DOM</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+    <script>
+        
+        function createElement(parent, elementType, attributes) {
+            const element = document.createElement(elementType);
+            for (const key in attributes) {
+                element[key] = attributes[key];
+            }
+            parent.appendChild(element);
+            return element;
+        }
+
+        
+        const mainContainer = document.createElement('div');
+        document.body.appendChild(mainContainer);
+
+        // Creating Generate PDF button
+        const generatePdfButton = createElement(mainContainer, 'button', {
+            id: 'generatepfd',
+            onclick: 'generatepfd_Click'
+        });
+        generatePdfButton.textContent = 'Generate PDF';
+
+        // Creating h1 element for the heading
+        const heading = createElement(mainContainer, 'h1', {
+            id: 'dailymeet',
+            style: 'text-align:center'
+        });
+        heading.textContent = 'IBL Logistics Order Form';
+
+        // Creating the panel body container
+        const panelBody = document.createElement('div');
+        document.body.appendChild(panelBody);
+
+        
+        const customerCodeLabel = createElement(panelBody, 'label', {});
+        customerCodeLabel.textContent = 'Customer Code';
+
+        const customerCodeInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'customercode'
+        });
+
+        // Customer Name
+        const customerNameLabel = createElement(panelBody, 'label', {});
+        customerNameLabel.textContent = 'Customer Name';
+
+        const customerNameInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'customername'
+        });
+
+        // City
+        const cityLabel = createElement(panelBody, 'label', {});
+        cityLabel.textContent = 'City';
+
+        const cityInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'city'
+        });
+
+        // Order ID
+        const orderIDLabel = createElement(panelBody, 'label', {});
+        orderIDLabel.textContent = 'Order ID';
+
+        const orderIDInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'orderid'
+        });
+
+        // Order Date
+        const orderDateLabel = createElement(panelBody, 'label', {});
+        orderDateLabel.textContent = 'Order Date';
+
+        const orderDateInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'orderdate'
+        });
+
+        // Customer Contact Person
+        const contactPersonLabel = createElement(panelBody, 'label', {});
+        contactPersonLabel.textContent = 'Customer Contact Person';
+
+        const contactPersonInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'contactperson'
+        });
+
+        // Customer Contact Info
+        const contactNoLabel = createElement(panelBody, 'label', {});
+        contactNoLabel.textContent = 'Customer Contact Info';
+
+        const contactNoInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'contactno'
+        });
+
+        // Stock Receiver Name/Contact
+        const receiverNameLabel = createElement(panelBody, 'label', {});
+        receiverNameLabel.textContent = 'Stock Receiver Name/Contact';
+
+        const receiverNameInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'recivername'
+        });
+
+        // Searle Customer Code
+        const receiverContactLabel = createElement(panelBody, 'label', {});
+        receiverContactLabel.textContent = 'Searle Customer Code';
+
+        const receiverContactInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'recivercontact'
+        });
+
+        // Delivery Mode
+        const deliveryModeLabel = createElement(panelBody, 'label', {});
+        deliveryModeLabel.textContent = 'Delivery Mode';
+
+        const deliveryModeInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'deliverymode'
+        });
+
+        // Payment Mode
+        const paymentModeLabel = createElement(panelBody, 'label', {});
+        paymentModeLabel.textContent = 'Payment Mode';
+
+        const paymentModeInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'payment'
+        });
+
+        // Category
+        const categoryLabel = createElement(panelBody, 'label', {});
+        categoryLabel.textContent = 'Category';
+
+        const categoryInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'Category'
+        });
+
+        // Project Name
+        const projectNameLabel = createElement(panelBody, 'label', {});
+        projectNameLabel.textContent = 'Project Name';
+
+        const projectNameInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'pname'
+        });
+
+        // Bill Through
+        const billThroughLabel = createElement(panelBody, 'label', {});
+        billThroughLabel.textContent = 'Bill Through';
+
+        const billThroughInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'searlcode'
+        });
+
+        // Salesman
+        const salesmanLabel = createElement(panelBody, 'label', {});
+        salesmanLabel.textContent = 'Salesman';
+
+        const salesmanInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'username'
+        });
+
+        // Sample Order ID
+        const sampleOrderIDLabel = createElement(panelBody, 'label', {});
+        sampleOrderIDLabel.textContent = 'Sample Order ID';
+
+        const sampleOrderIDInput = createElement(panelBody, 'input', {
+            type: 'text',
+            id: 'Sample_id'
+        });
+
+        // Delivery Address
+        const deliveryAddressLabel = createElement(panelBody, 'label', {
+            id: 'address'
+        });
+
+        // Product Table
+        const productTable = createElement(panelBody, 'table', {
+            class: 'table table-bordered'
+        });
+
+        // Table Head
+        const tableHead = createElement(productTable, 'thead');
+        const tableHeadRow = createElement(tableHead, 'tr');
+
+        ['No.', 'Product ID', 'Product Name', 'Price', 'Quantity', 'Total Price'].forEach(headerText => {
+            const th = createElement(tableHeadRow, 'th');
+            th.textContent = headerText;
+        });
+
+        // Table Body
+        const tableBody = createElement(productTable, 'tbody');
+
+        // Example Table Data
+        const tableRow1 = createElement(tableBody, 'tr');
+        ['1', 'PID001', 'Product 1', '$10.00', '5', '$50.00'].forEach(cellText => {
+            const td = createElement(tableRow1, 'td');
+            td.textContent = cellText;
+        });
+
+        const tableRow2 = createElement(tableBody, 'tr');
+        ['2', 'PID002', 'Product 2', '$15.00', '3', '$45.00'].forEach(cellText => {
+            const td = createElement(tableRow2, 'td');
+            td.textContent = cellText;
+        });
+
+        const tableRow3 = createElement(tableBody, 'tr');
+        ['3', 'PID003', 'Product 3', '$20.00', '4', '$80.00'].forEach(cellText => {
+            const td = createElement(tableRow3, 'td');
+            td.textContent = cellText;
+        });
+
+        // Rest of the elements...
+
+        // Example: Creating the Submit button
+        const submitButton = createElement(panelBody, 'button', {
+            id: 'Submit',
+            style: 'visibility: hidden',
+            onclick: 'Button1_Click'
+        });
+        submitButton.textContent = 'Submit';
+
+    </script>
+</body>
+</html>

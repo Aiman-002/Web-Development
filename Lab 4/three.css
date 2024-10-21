@@ -1,0 +1,36 @@
+.top{
+    margin: 10px;
+    padding: 10px;
+}
+
+.main{
+    display: flex;
+    gap: 1em;
+   
+}
+.d1{
+    padding: 10px;
+    margin: 10px;
+    flex: 3;
+    
+}
+
+.d2{
+    padding: 10px;
+    margin: 10px;
+    flex: 3;
+    background-color: rgb(81, 76, 76);
+    color: aliceblue;
+    
+}
+
+.d2 [input]{
+    border-bottom: 1px solid whitesmoke ;
+    border: none;
+}
+
+.d3{
+    padding: 10px;
+    margin: 10px;
+    flex: 3;
+}

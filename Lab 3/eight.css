@@ -1,0 +1,10 @@
+body{
+    background-color: bisque;
+    border: dashed black;
+}
+.content{
+    margin: 60px;
+    text-align: center;
+    border: 29px solid #0a0909;
+    padding: 50px ;
+}

@@ -1,0 +1,404 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <script>
+       
+        function createElement(tag, attributes, text) {
+            var element = document.createElement(tag);
+            for (var key in attributes) {
+                element.setAttribute(key, attributes[key]);
+            }
+            if (text) {
+                element.appendChild(document.createTextNode(text));
+            }
+            return element;
+        }
+
+        
+        function setValues() {
+           
+            var panelHeading = document.createElement('div');
+            panelHeading.classList.add('panel-heading');
+
+            var generatePdfButton = createElement('button', {
+                'id': 'generatepfd',
+                'class': 'btn btn-primary pull-right',
+                'style': 'margin-right:1.5%',
+                'onclick': 'generatepfd_Click'
+            }, 'Generate PDF');
+
+            var heading = createElement('h1', {
+                'class': 'text-primary',
+                'id': 'dailymeet',
+                'style': 'text-align:center'
+            }, 'IBL Logistics Order Form');
+
+            panelHeading.appendChild(generatePdfButton);
+            panelHeading.appendChild(heading);
+
+            
+            document.body.appendChild(panelHeading);
+
+            
+            var customerCodeLabel = createElement('label', {
+                'for': 'name',
+                'class': 'control-label center-block label label-primary',
+                'style': 'border:2px solid green;'
+            }, 'Customer Code');
+
+            var customerCodeFormGroup = createElement('div', {
+                'class': 'form-group'
+            });
+
+            var customerCodeLabelControl = createElement('label', {
+                'id': 'customercode',
+                'class': 'form-control'
+            });
+
+            customerCodeFormGroup.appendChild(customerCodeLabelControl);
+
+            document.body.appendChild(customerCodeLabel);
+            document.body.appendChild(customerCodeFormGroup);
+
+            document.getElementById('customercode').textContent = 'C001';
+
+           
+            var customerNameLabel = createElement('label', {
+                'for': 'name',
+                'class': 'control-label center-block label label-primary',
+                'style': 'border:2px solid green;'
+            }, 'Customer Name');
+
+            var customerNameFormGroup = createElement('div', {
+                'class': 'form-group'
+            });
+
+            var customerNameLabelControl = createElement('label', {
+                'id': 'customername',
+                'class': 'form-control'
+            });
+
+            customerNameFormGroup.appendChild(customerNameLabelControl);
+
+            document.body.appendChild(customerNameLabel);
+            document.body.appendChild(customerNameFormGroup);
+
+            document.getElementById('customername').textContent = 'John Doe';
+
+            // City
+            var cityLabel = createElement('label', {
+                'for': 'name',
+                'class': 'control-label center-block label label-primary',
+                'style': 'border:2px solid green;'
+            }, 'City');
+
+            var cityFormGroup = createElement('div', {
+                'class': 'form-group'
+            });
+
+            var cityLabelControl = createElement('label', {
+                'id': 'city',
+                'class': 'form-control'
+            });
+
+            cityFormGroup.appendChild(cityLabelControl);
+
+            document.body.appendChild(cityLabel);
+            document.body.appendChild(cityFormGroup);
+
+            document.getElementById('city').textContent = 'New York';
+
+            // Order ID
+            var orderIdLabel = createElement('label', {
+                'for': 'name',
+                'class': 'control-label center-block label label-primary',
+                'style': 'border:2px solid green;'
+            }, 'Order ID');
+
+            var orderIdFormGroup = createElement('div', {
+                'class': 'form-group'
+            });
+
+            var orderIdLabelControl = createElement('label', {
+                'id': 'orderid',
+                'class': 'form-control'
+            });
+
+            orderIdFormGroup.appendChild(orderIdLabelControl);
+
+            document.body.appendChild(orderIdLabel);
+            document.body.appendChild(orderIdFormGroup);
+
+            document.getElementById('orderid').textContent = '123456';
+
+            // Order Date
+            var orderDateLabel = createElement('label', {
+                'for': 'name',
+                'class': 'control-label center-block label label-primary',
+                'style': 'border:2px solid green;'
+            }, 'Order Date');
+
+            var orderDateFormGroup = createElement('div', {
+                'class': 'form-group'
+            });
+
+            var orderDateLabelControl = createElement('label', {
+                'id': 'orderdate',
+                'class': 'form-control'
+            });
+
+            orderDateFormGroup.appendChild(orderDateLabelControl);
+
+            document.body.appendChild(orderDateLabel);
+            document.body.appendChild(orderDateFormGroup);
+
+            document.getElementById('orderdate').textContent = '2024-02-20';
+
+var contactPersonLabel = createElement('label', {
+    'for': 'name',
+    'class': 'control-label center-block label label-primary',
+    'style': 'border:2px solid green;'
+}, 'Customer Contact Person');
+
+var contactPersonFormGroup = createElement('div', {
+    'class': 'form-group'
+});
+
+var contactPersonLabelControl = createElement('label', {
+    'id': 'contactperson',
+    'class': 'form-control'
+});
+
+contactPersonFormGroup.appendChild(contactPersonLabelControl);
+
+document.body.appendChild(contactPersonLabel);
+document.body.appendChild(contactPersonFormGroup);
+
+document.getElementById('contactperson').textContent = 'Jane Doe';
+
+// Customer Contact Info
+var contactNoLabel = createElement('label', {
+    'for': 'name',
+    'class': 'control-label center-block label label-primary',
+    'style': 'border:2px solid green;'
+}, 'Customer Contact Info');
+
+var contactNoFormGroup = createElement('div', {
+    'class': 'form-group'
+});
+
+var contactNoLabelControl = createElement('label', {
+    'id': 'contactno',
+    'class': 'form-control'
+});
+
+contactNoFormGroup.appendChild(contactNoLabelControl);
+
+document.body.appendChild(contactNoLabel);
+document.body.appendChild(contactNoFormGroup);
+
+document.getElementById('contactno').textContent = '123-456-7890';
+
+// Stock Receiver Name / Contact
+var receiverNameLabel = createElement('label', {
+    'for': 'name',
+    'class': 'control-label center-block label label-primary',
+    'style': 'border:2px solid green;'
+}, 'Stock Receiver Name / Contact');
+
+var receiverNameFormGroup = createElement('div', {
+    'class': 'form-group'
+});
+
+var receiverNameLabelControl = createElement('label', {
+    'id': 'recivername',
+    'class': 'form-control'
+});
+
+receiverNameFormGroup.appendChild(receiverNameLabelControl);
+
+document.body.appendChild(receiverNameLabel);
+document.body.appendChild(receiverNameFormGroup);
+
+document.getElementById('recivername').textContent = 'John Smith';
+
+// Searle Customer Code
+var receiverCodeLabel = createElement('label', {
+    'for': 'name',
+    'class': 'control-label center-block label label-primary',
+    'style': 'border:2px solid green;'
+}, 'Searle Customer Code');
+
+var receiverCodeFormGroup = createElement('div', {
+    'class': 'form-group'
+});
+
+var receiverCodeLabelControl = createElement('label', {
+    'id': 'recivercontact',
+    'class': 'form-control'
+});
+
+receiverCodeFormGroup.appendChild(receiverCodeLabelControl);
+
+document.body.appendChild(receiverCodeLabel);
+document.body.appendChild(receiverCodeFormGroup);
+
+document.getElementById('recivercontact').textContent = 'SCC001';
+
+
+var deliveryModeLabel = createElement('label', {
+    'for': 'pwd',
+    'class': 'control-label center-block label label-primary',
+    'style': 'border:2px solid green;'
+}, 'Delivery Mode');
+
+var deliveryModeFormGroup = createElement('label', {
+    'id': 'deliverymode',
+    'class': 'form-control'
+});
+
+document.body.appendChild(deliveryModeLabel);
+document.body.appendChild(deliveryModeFormGroup);
+
+document.getElementById('deliverymode').textContent = 'Express Delivery';
+
+// Payment Mode
+var paymentModeLabel = createElement('label', {
+    'for': 'pwd',
+    'class': 'control-label center-block label label-primary',
+    'style': 'border:2px solid green;'
+}, 'Payment Mode');
+
+var paymentModeFormGroup = createElement('label', {
+    'id': 'payment',
+    'class': 'form-control'
+});
+
+document.body.appendChild(paymentModeLabel);
+document.body.appendChild(paymentModeFormGroup);
+
+document.getElementById('payment').textContent = 'Credit Card';
+
+// Category
+var categoryLabel = createElement('label', {
+    'for': 'pwd',
+    'class': 'control-label center-block label label-primary',
+    'style': 'border:2px solid green;'
+}, 'Category');
+
+var categoryFormGroup = createElement('label', {
+    'id': 'Category',
+    'class': 'form-control'
+});
+
+document.body.appendChild(categoryLabel);
+document.body.appendChild(categoryFormGroup);
+
+document.getElementById('Category').textContent = 'Electronics';
+
+// Project Name
+var projectNameLabel = createElement('label', {
+    'for': 'name',
+    'class': 'control-label center-block label label-primary',
+    'style': 'border:2px solid green;'
+}, 'Project Name');
+
+var projectNameFormGroup = createElement('div', {
+    'class': 'form-group'
+});
+
+var projectNameLabelControl = createElement('label', {
+    'id': 'pname',
+    'class': 'form-control'
+});
+
+projectNameFormGroup.appendChild(projectNameLabelControl);
+
+document.body.appendChild(projectNameLabel);
+document.body.appendChild(projectNameFormGroup);
+
+document.getElementById('pname').textContent = 'Project ABC';
+
+// Bill Through
+var billThroughLabel = createElement('label', {
+    'for': 'name',
+    'class': 'control-label center-block label label-primary',
+    'style': 'border:2px solid green;'
+}, 'Bill Through');
+
+var billThroughFormGroup = createElement('div', {
+    'class': 'form-group'
+});
+
+var billThroughLabelControl = createElement('label', {
+    'id': 'searlcode',
+    'class': 'form-control'
+});
+
+billThroughFormGroup.appendChild(billThroughLabelControl);
+
+document.body.appendChild(billThroughLabel);
+document.body.appendChild(billThroughFormGroup);
+
+document.getElementById('searlcode').textContent = 'Direct Billing';
+
+// Salesman
+var salesmanLabel = createElement('label', {
+    'for': 'name',
+    'class': 'control-label center-block label label-primary',
+    'style': 'border:2px solid green;'
+}, 'Salesman');
+
+var salesmanFormGroup = createElement('div', {
+    'class': 'form-group'
+});
+
+var salesmanLabelControl = createElement('label', {
+    'id': 'username',
+    'class': 'form-control'
+});
+
+salesmanFormGroup.appendChild(salesmanLabelControl);
+
+document.body.appendChild(salesmanLabel);
+document.body.appendChild(salesmanFormGroup);
+
+document.getElementById('username').textContent = 'John Salesman';
+
+// Sample Order ID
+var sampleOrderIdLabel = createElement('label', {
+    'for': 'name',
+    'class': 'control-label center-block label label-primary',
+    'style': 'border:2px solid green;'
+}, 'Sample Order ID');
+
+var sampleOrderIdFormGroup = createElement('div', {
+    'class': 'form-group'
+});
+
+var sampleOrderIdLabelControl = createElement('label', {
+    'id': 'Sample_id',
+    'class': 'form-control'
+});
+
+sampleOrderIdFormGroup.appendChild(sampleOrderIdLabelControl);
+
+document.body.appendChild(sampleOrderIdLabel);
+document.body.appendChild(sampleOrderIdFormGroup);
+
+document.getElementById('Sample_id').textContent = 'SAMPLE123';
+
+        }
+        window.onload = setValues;
+    </script>
+</body>
+
+</html>

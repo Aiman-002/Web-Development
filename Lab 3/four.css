@@ -1,0 +1,53 @@
+.body{
+    background-color: beige;
+    color: black;
+    padding: 100px;
+}
+.main{
+    display: flex;
+}
+.d1{
+flex: 6;
+background-color: white;
+color: royalblue;
+padding: 50px;
+
+}
+.d1 #submit{
+    background-color: royalblue;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100px;
+    margin-top: 30px;
+}
+
+.input1 {
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+
+.input1 .input2{
+    flex-basis: 45%;
+}
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    outline: none;
+}
+
+textarea{
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.d2{
+flex: 4;
+background-color: royalblue;
+color: white;
+padding: 50px;
+
+}

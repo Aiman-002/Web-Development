@@ -1,0 +1,100 @@
+.body{
+background-color: black;
+}
+.main{
+display: flex;
+justify-content: space-evenly;
+gap: 15em;
+padding: 140px;
+
+}
+.form-container{
+flex: 1;
+background-color: white;
+border-radius: 10px;
+padding: 50px;
+margin-bottom: 30px;
+text-align: center;
+}
+
+
+.form-container button {
+    width: 150px;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container #signInBtn {
+    background-color: black;
+    color: white;
+}
+
+.form-container #signUpBtn {
+    background-color: white;
+    color: black;
+}
+
+.form-container #facebookBtn {
+    background-color:rgb(50, 50, 208);
+    color: white;
+    font-weight: bolder;
+}
+
+.form-container #googleBtn {
+    background-color:rgb(215, 59, 59);
+    color: white;
+    font-weight: bolder;
+}
+
+.form-container #submit{
+    width:  80%;
+    background-color: black;
+    color: white;
+}
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.f2{
+    flex: 1;
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    margin-bottom: 30px;
+    text-align: center; 
+}
+
+.f2 input{
+    width: 100%;
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.f2 #submit{
+    background-color: black;
+    color: white;
+    width: 80%;
+}
+
+.f2 button {
+    width: 150px;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.f2 #signInBtn{
+background-color: black;
+color: white;
+}
