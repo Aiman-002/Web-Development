@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>education page</title>
+</head>
+<body>
+    <div id="index">
+        <script>
+            fetch('index.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('index').innerHTML = data);
+        </script>
+        </div>
+    <h1>
+        Education
+    </h1>
+    <p>
+
+        Bachelor of Science in Software Engineering<br />
+        <b>
+            FAST NATIONAL UNIVERSITY, KARACHI
+        </b>
+    </p>
+</body>
+</html>

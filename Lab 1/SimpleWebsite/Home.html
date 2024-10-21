@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+</head>
+<body>
+    <div id="index">
+        <script>
+            fetch('index.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('index').innerHTML = data);
+        </script>
+        </div>
+    <h1>Welcome to the Home Page</h1>
+    <p>This is the content of the home page.</p>
+    <img src="https://images.unsplash.com/photo-1705909715621-a0e615008487?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDR8Ym84alFLVGFFMFl8fGVufDB8fHx8fA%3D%3D" alt="">
+</body>
+</html>
