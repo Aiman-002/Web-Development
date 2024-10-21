@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .slider {
+            overflow: hidden;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+        }
+
+       
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -30px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 p-4">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">Image Slider</h2>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="https://cdn.smartslider3.com/wp-content/uploads/2019/05/sliderimages-780x410.png" alt="Image 1"></div>
+                <div class="slide"><img src="https://cdn.smartslider3.com/wp-content/uploads/2019/01/imageslider-1.png" alt="Image 2"></div>
+                <div class="slide"><img src="https://d25yuvogekh0nj.cloudfront.net/2020/11/mw1920_How-to-Create-Image-Carousels-_-Sliders-_And-Why-They_re-Awesome_-banner-1250x500.png" alt="Image 3"></div>
+                
+            </div>
+            <div class="prev" onclick="prevSlide()">&#10094;</div>
+            <div class="next" onclick="nextSlide()">&#10095;</div>
+        </div>
+    </div>
+   
+    <script src="Task8.js"></script>
+</body>
+</html>
